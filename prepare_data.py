@@ -38,4 +38,4 @@ def load_images_and_annotations(data, input_size, grid):
             annotations[i, cell_y_min, cell_x_min, :4] = list(map(lambda x: x*input_size[0], [x_min, y_min, x_max, y_max]))
             annotations[i, cell_y_min, cell_x_min, 4] = 1  # Indicating the presence of an object
             annotations[i, cell_y_min, cell_x_min, 5+class_label] = 1  # Setting class label
-    return images, annotations
+    return images, annotations, num2classes, classes2num, num_classes
