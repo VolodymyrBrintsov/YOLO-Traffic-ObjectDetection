@@ -12,7 +12,7 @@ def load_images_and_annotations(data, input_size, grid):
     # Load the image
     filenames = data["filename"].unique()
     for i, filename in enumerate(filenames):
-        image_path = os.path.join("/content/train", filename)
+        image_path = os.path.join("data/train", filename)
         image = cv2.imread(image_path)
         original_shape = image.shape[:2]
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
